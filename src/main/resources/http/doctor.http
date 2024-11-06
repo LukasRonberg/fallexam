@@ -1,0 +1,64 @@
+### Create a Trip
+POST {{url}}/trips/
+Content-Type: application/json
+Authorization: Bearer {{jwt_token}}
+
+{
+  "name": "Beach Getaway",
+  "startTime": "2024-06-15",
+  "endTime": "2024-06-22",
+  "longitude": 98.765,
+  "latitude": 43.210,
+  "price": 150.0,
+  "category": "BEACH"
+}
+
+### Read All Trips
+GET {{url}}/trips/
+Authorization: Bearer {{jwt_token}}
+
+### Read a Trip by ID
+GET {{url}}/trips/1
+Authorization: Bearer {{jwt_token}}
+
+### Get Trips by Category
+GET {{url}}/trips/category/BEACH
+Authorization: Bearer {{jwt_token}}
+
+### Get Trips by Date Range
+GET {{url}}/trips/date/range?from=2024-01-01&to=2024-12-31
+Authorization: Bearer {{jwt_token}}
+
+### Update a Trip
+PUT {{url}}/trips/1
+Content-Type: application/json
+Authorization: Bearer {{jwt_token}}
+
+{
+  "name": "Beach Getaway Updated",
+  "startTime": "2024-06-15",
+  "endTime": "2024-06-25",
+  "longitude": 98.765,
+  "latitude": 43.210,
+  "price": 200.0,
+  "category": "BEACH"
+}
+
+### Get Trips by Category
+GET {{url}}/trips/category/CITY
+Authorization: Bearer {{jwt_token}}
+
+### Delete a Trip
+DELETE {{url}}/trips/1
+Authorization: Bearer {{jwt_token}}
+
+### Populate with data
+POST {{url}}/trips/populate
+Authorization: Bearer {{jwt_token}}
+
+### Get Packing Items by Category
+GET {{url}}/trips/packing-items/category/CITY
+Authorization: Bearer {{jwt_token}}
+
+
+

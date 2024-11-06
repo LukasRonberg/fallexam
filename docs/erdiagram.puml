@@ -1,0 +1,36 @@
+@startuml
+
+entity "Event" {
+    +id: Integer
+    +eventName: String
+    +estimatedPrice: Double
+    +description: String
+    +dressCode: String
+}
+
+entity "EventGroup" {
+    +EventGroupId: Integer
+    +EventGroupNumber: Integer
+    +EventGroupPrice: Double
+    +EventGroupType: String
+}
+
+entity "User" {
+    +username: String
+    +password: String
+}
+
+entity "UserEventGroup" {
+    +eventId
+    +userId
+}
+
+
+
+
+Event ||-{ EventGroup
+User ||--{ UserEventGroup
+EventGroup ||--{ UserEventGroup
+
+
+@enduml
