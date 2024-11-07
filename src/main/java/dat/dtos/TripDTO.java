@@ -59,10 +59,6 @@ public class TripDTO {
         this.category = category;
     }
 
-    public static List<TripDTO> toTripDTOList(List<Trip> trips) {
-        return trips.stream().map(TripDTO::new).collect(Collectors.toList());
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -75,5 +71,4 @@ public class TripDTO {
     public int hashCode() {
         return getId().hashCode();
     }
-
 }

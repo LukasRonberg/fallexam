@@ -36,12 +36,4 @@ public class GuideDTO {
             this.tripIds = guide.getTrips().stream().map(trip -> Long.valueOf(trip.getId())).toList();
         }
     }
-
-    public GuideDTO(String firstName, String lastName, String email, String phone, int yearsOfExperience) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.phone = phone;
-        this.yearsOfExperience = yearsOfExperience;
-    }
 }

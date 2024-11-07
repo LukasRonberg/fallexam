@@ -2,6 +2,7 @@ package dat.entities;
 
 import dat.dtos.TripDTO;
 import jakarta.persistence.*;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -11,7 +12,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Objects;
 
-@Getter
+@Data
 @NoArgsConstructor
 @Entity
 @Table(name = "trip")
@@ -97,14 +98,6 @@ public class Trip {
     @Override
     public int hashCode() {
         return Objects.hash(name);
-    }
-
-    public void setGuide(Guide guide) {
-        this.guide = guide; // Setter for guide
-    }
-
-    public Guide getGuide() {
-        return guide; // Getter for guide
     }
 
     public enum Category {

@@ -38,6 +38,4 @@ public class UserDTO extends dk.bugelhartmann.UserDTO {
         this.phoneNumber = user.getPhoneNumber();
         this.email = user.getEmail();
     }
-
-
 }

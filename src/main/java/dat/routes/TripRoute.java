@@ -24,8 +24,6 @@ public class TripRoute {
     private final TripController tripController = new TripController(populator);
 
 
-
-
     protected EndpointGroup getRoutes() {
 
         return () -> {
